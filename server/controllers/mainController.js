@@ -14,6 +14,7 @@ exports.about = async (req, res) => {
     const locals = {
         title: 'About Page',
         description: 'Info About Page',
+        // layout: '../views/layouts/front-page'
     }
     res.render('about', locals)
 }

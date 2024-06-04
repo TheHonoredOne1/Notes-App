@@ -6,4 +6,4 @@ const dashboardController = require('../controllers/dashboardController')
 router.get('/dashboard', dashboardController.dashboard)
 
 
-module.exports = router; 
+module.exports = router ;
