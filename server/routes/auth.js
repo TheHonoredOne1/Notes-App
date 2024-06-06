@@ -11,7 +11,9 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK_URL
 },
     async function (accessToken, refreshToken, profile, done) {
+        
 
+        // console.log(profile)
         const newUser = {
             googleId: profile.id,
             displayName: profile.displayName,
@@ -37,8 +39,7 @@ passport.use(new GoogleStrategy({
 ));
 
 // Google login route //
-router.get(
-    '/auth/google',
+router.get('/auth/google',
     passport.authenticate(
         'google',
         { scope: ['email', 'profile'] }
@@ -47,15 +48,12 @@ router.get(
 
 
 // retrieve user data //
-router.get('/google/callback', passport.authenticate('google',
-    {
-        failureRedirect: '/login-failure',
-        successRedirect: '/dashboard'
-    }),
-    // function (req, res) {
-    //     // Successful authentication, redirect home.
-    //     res.redirect('/');
-    // }
+router.get('/google/callback',
+    passport.authenticate('google',
+        {
+            failureRedirect: '/login-failure',
+            successRedirect: '/dashboard'
+        }),
 );
 
 // route if something goes wrong //
@@ -63,7 +61,7 @@ router.get('/login-failure', (req, res) => {
     res.send('Something went wrong...')
 })
 
-
+// destroy user session //
 router.get('/logout', (req, res) => {
     req.session.destroy(error => {
         if (error) {

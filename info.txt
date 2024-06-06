@@ -1,0 +1,32 @@
+{
+  id: '116067827463267728196',
+  displayName: 'Devil Daddy',
+  name: { familyName: 'Daddy', givenName: 'Devil' },
+  emails: [ { value: 'devilldaddy666666@gmail.com', verified: true } ],
+  photos: [
+    {
+      value: 'https://lh3.googleusercontent.com/a/ACg8ocIQa5P_Sr9IDhUySSqXVvtCZTD6HowulWffn0d8o8xxIgIowA=s96-c'
+    }
+  ],
+  provider: 'google',
+  _raw: '{\n' +
+    '  "sub": "116067827463267728196",\n' +
+    '  "name": "Devil Daddy",\n' +
+    '  "given_name": "Devil",\n' +
+    '  "family_name": "Daddy",\n' +
+    '  "picture": "https://lh3.googleusercontent.com/a/ACg8ocIQa5P_Sr9IDhUySSqXVvtCZTD6HowulWffn0d8o8xxIgIowA\\u003ds96-c",\n' +
+    '  "email": "devilldaddy666666@gmail.com",\n' +
+    '  "email_verified": true,\n' +
+    '  "locale": "en-GB"\n' +
+    '}',
+  _json: {
+    sub: '116067827463267728196',
+    name: 'Devil Daddy',
+    given_name: 'Devil',
+    family_name: 'Daddy',
+    picture: 'https://lh3.googleusercontent.com/a/ACg8ocIQa5P_Sr9IDhUySSqXVvtCZTD6HowulWffn0d8o8xxIgIowA=s96-c',        
+    email: 'devilldaddy666666@gmail.com',
+    email_verified: true,
+    locale: 'en-GB'
+  }
+}
